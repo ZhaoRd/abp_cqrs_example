@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="wrap">
+    <div class="top">
+      <div class="head">
+        <img class="logo" src="./assets/logo-color.svg">
+        <span class="title">AddressBook
+        </span>
+      </div>
+      <div class="desc">Abp & NgAlain</div>
+      <passport-tenant-change></passport-tenant-change>
+    </div>
+    <router-outlet></router-outlet>
+    
+    <passport-account-languages></passport-account-languages>
+  
+    <global-footer [links]="links">
+
+      Copyright 
+      <i class="anticon anticon-copyright"></i> {{currentYear}} 
+      AddressBook. <b>Version </b> {{versionText}}
+    </global-footer>
+  </div>
+</div>

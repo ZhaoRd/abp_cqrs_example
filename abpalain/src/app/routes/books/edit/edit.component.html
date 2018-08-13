@@ -1,0 +1,46 @@
+<div class="modal-header">
+    <div class="modal-title">编辑通讯录</div>
+  </div>
+  
+  
+  <nz-tabset>
+    <nz-tab nzTitle="基本信息">
+  
+      <div nz-row>
+        <div nz-col class="mt-sm">
+          姓名:{{book.name}}
+        </div>
+      </div>
+  
+      
+      <div nz-row>
+        <div nz-col class="mt-sm">
+          邮箱
+        </div>
+        <div ng-col class="mt-sm">
+          <input nz-input [(ngModel)]="book.emailAddress" />
+        </div>
+      </div>
+
+      <div nz-row>
+          <div nz-col class="mt-sm">
+            电话号码
+          </div>
+          <div ng-col class="mt-sm">
+            <input nz-input [(ngModel)]="book.tel" />
+          </div>
+        </div>
+    
+  
+    </nz-tab>
+  </nz-tabset>
+  
+  
+  <div class="modal-footer">
+    <button nz-button [nzType]="'default'" [nzSize]="'large'" (click)="close()">
+      取消
+    </button>
+    <button nz-button [nzType]="'primary'" [nzSize]="'large'" (click)="save()">
+      保存
+    </button>
+  </div>

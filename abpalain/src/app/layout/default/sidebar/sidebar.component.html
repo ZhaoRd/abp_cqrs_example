@@ -1,0 +1,16 @@
+<div class="aside-inner">
+  <nz-dropdown nzTrigger="click" class="user-block">
+    <div nz-dropdown class="user-block-dropdown">
+      <nz-avatar class="avatar" [nzSrc]="'/assets/images/user.png'"></nz-avatar>
+      <div class="info">
+        <strong>{{shownLoginName}}</strong>
+      </div>
+    </div>
+    <ul nz-menu>
+      <li nz-menu-item (click)="msgSrv.success('profile')">{{ 'profile' | translate }}</li>
+      <li nz-menu-item (click)="msgSrv.success('settings')">{{ 'settings' | translate }}</li>
+      <li nz-menu-item (click)="logout()">{{ 'logout' | translate }}</li>
+    </ul>
+  </nz-dropdown>
+  <sidebar-nav class="d-block py-lg"></sidebar-nav>
+</div>
